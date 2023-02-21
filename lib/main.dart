@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
+          backgroundColor: Color(0xffF6F6F9),
           body: SafeArea(
             child: Column(
               children: [MyAppBar(), LoginScreen()],
