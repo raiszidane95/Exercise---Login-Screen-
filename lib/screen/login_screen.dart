@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:login_task/widget/cta_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -78,39 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         const SizedBox(height: 75),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(50),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  SizedBox(
-                    height: 50,
-                    width: 250,
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                        backgroundColor: Color(0xffFA4A0C),
-                        foregroundColor: Colors.white,
-                        padding: const EdgeInsets.all(4),
-                        textStyle: const TextStyle(fontSize: 16),
-                      ),
-                      onPressed: () {},
-                      child: const Text(
-                        'Login',
-                        style: TextStyle(
-                            fontFamily: 'Source Sans Pro',
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+        Ctabutton()
       ],
     );
   }
