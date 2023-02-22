@@ -26,7 +26,7 @@ class _MyAppBarState extends State<MyAppBar> {
             child: Image.asset("assets/asset1.png"),
           ),
           TabBar(
-            indicatorSize: TabBarIndicatorSize.tab,
+            padding: EdgeInsets.symmetric(horizontal: 50),
             indicatorColor: Color(0xffFA4A0C),
             labelColor: Colors.black,
             labelStyle: TextStyle(
