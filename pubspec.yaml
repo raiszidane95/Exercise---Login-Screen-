@@ -63,6 +63,9 @@ flutter:
   assets:
     - assets/asset1.png
     - assets/No-Internet.png
+    - assets/No-Search.png
+    - assets/No-History.png
+    - assets/No-Cart.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

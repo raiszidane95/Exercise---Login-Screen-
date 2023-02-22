@@ -79,7 +79,9 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         const SizedBox(height: 75),
-        Ctabutton()
+        Ctabutton(
+          textTitle: 'Login',
+        )
       ],
     );
   }

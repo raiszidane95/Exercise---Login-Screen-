@@ -37,42 +37,7 @@ class NoInternetScreen extends StatelessWidget {
                   fontSize: 17,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.only(top: 55),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(50),
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          SizedBox(
-                            height: 50,
-                            width: 250,
-                            child: TextButton(
-                              style: TextButton.styleFrom(
-                                backgroundColor: Color(0xffFA4A0C),
-                                foregroundColor: Colors.white,
-                                padding: const EdgeInsets.all(4),
-                                textStyle: const TextStyle(fontSize: 16),
-                              ),
-                              onPressed: () {},
-                              child: const Text(
-                                'Try Again',
-                                style: TextStyle(
-                                    fontFamily: 'Source Sans Pro',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              Ctabutton(textTitle: 'Try Again')
             ],
           ),
         ),
