@@ -1,8 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:login_task/Appbar.dart';
-import 'package:login_task/login_screen.dart';
+import 'package:login_task/screen/search%20screen/empty_screen_search.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,17 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DefaultTabController(
-        length: 2,
-        child: Scaffold(
-          backgroundColor: Color(0xffF6F6F9),
-          body: SafeArea(
-            child: Column(
-              children: [MyAppBar(), LoginScreen()],
-            ),
-          ),
-        ),
-      ),
+      home: EmptySearchScreen(),
     );
   }
 }
