@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_task/widget/cta_button.dart';
+
+import '../widget/cta_button_widget.dart';
+import '../widget/empty_content_widget.dart';
 
 class NoInternetScreen extends StatelessWidget {
   const NoInternetScreen({super.key});
@@ -15,28 +17,13 @@ class NoInternetScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                alignment: Alignment.center,
-                child: Image.asset("assets/No-Internet.png"),
-              ),
-              Container(
-                padding: EdgeInsets.only(top: 26, bottom: 17),
-                child: Text(
-                  'No Internet Connection',
-                  style: TextStyle(
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 28,
-                      fontWeight: FontWeight.w600),
-                ),
-              ),
-              Text(
-                'Your internet connection is currently not available please check or try again.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: 'Source Sans Pro',
-                  fontSize: 17,
-                ),
-              ),
+              const Spacer(),
+              EmptyContentWidget(
+                  tittleText: 'No internet connection',
+                  messageText:
+                      'Your internet connection is currently not available please check or try again.',
+                  asset: "assets/images/no_internet_image.svg"),
+              const Spacer(),
               Ctabutton(textTitle: 'Try Again')
             ],
           ),
