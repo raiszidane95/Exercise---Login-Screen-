@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:login_task/screen/login%20screen/login_screen.dart';
 
 import '../widget/appbar_widget.dart';
-import 'login_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
