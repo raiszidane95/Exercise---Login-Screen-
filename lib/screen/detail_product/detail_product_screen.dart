@@ -10,6 +10,18 @@ class DetailProductScreen extends StatefulWidget {
 }
 
 class _DetailProductScreenState extends State<DetailProductScreen> {
+  Color _iconColor = Colors.redAccent;
+  bool _selectedIndex = true;
+  int position = 1;
+  _onSelected(bool index) {
+    //https://inducesmile.com/google-flutter/how-to-change-the-background-color-of-selected-listview-in-flutter/
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  void pressedFavorite() {}
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -25,7 +37,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const IconButton(
+                      IconButton(
                         onPressed: null,
                         icon: Icon(
                           Icons.arrow_back_ios_new,
@@ -33,12 +45,18 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                           color: Colors.black,
                         ),
                       ),
-                      const IconButton(
-                        onPressed: null,
-                        icon: Icon(
-                          Icons.favorite_outline,
-                          color: Colors.black,
-                        ),
+                      Expanded(
+                        child: ListTile(
+                            trailing: IconButton(
+                                icon: Icon(
+                                  Icons.favorite,
+                                  color: _iconColor,
+                                ),
+                                onPressed: () {
+                                  setState(() {
+                                    _iconColor = Colors.redAccent;
+                                  });
+                                })),
                       ),
                     ],
                   ),
@@ -53,7 +71,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                     'Veggie tomato mix',
                     style: TextStyle(
                         fontSize: 28,
-                        fontFamily: 'Source Sans',
+                        fontFamily: 'SF Pro',
                         fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -64,7 +82,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                     style: TextStyle(
                         color: Color(0xffFA4A0C),
                         fontSize: 22,
-                        fontFamily: 'Source Sans',
+                        fontFamily: 'SF Pro',
                         fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -80,7 +98,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                           textAlign: TextAlign.start,
                           style: TextStyle(
                               fontSize: 17,
-                              fontFamily: 'Source Sans',
+                              fontFamily: 'SF Pro',
                               fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -98,7 +116,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                           textAlign: TextAlign.start,
                           style: TextStyle(
                               fontSize: 17,
-                              fontFamily: 'Source Sans',
+                              fontFamily: 'SF Pro',
                               fontWeight: FontWeight.w600),
                         ),
                       ),

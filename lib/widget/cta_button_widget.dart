@@ -31,7 +31,7 @@ class Ctabutton extends StatelessWidget {
                 child: Text(
                   textTitle,
                   style: TextStyle(
-                      fontFamily: 'Source Sans Pro',
+                      fontFamily: 'SF Pro',
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),

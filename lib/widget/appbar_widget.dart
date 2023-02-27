@@ -22,28 +22,7 @@ class _MyAppBarState extends State<MyAppBar> {
           Container(
             alignment: Alignment.topCenter,
             padding: const EdgeInsets.all(30),
-            child: Image.asset("assets/asset1.png"),
-          ),
-          TabBar(
-            padding: EdgeInsets.symmetric(horizontal: 50),
-            indicatorColor: Color(0xffFA4A0C),
-            labelColor: Colors.black,
-            labelStyle: TextStyle(
-                fontSize: 20.0,
-                fontFamily: 'Source Sans Pro',
-                fontWeight: FontWeight.w600), //For Selected tab
-            unselectedLabelStyle: TextStyle(
-                fontSize: 20.0,
-                fontFamily: 'Source Sans Pro',
-                fontWeight: FontWeight.w600), //For Un-selected Tabs
-            tabs: [
-              Tab(
-                text: 'Login',
-              ),
-              Tab(
-                text: 'Sign Up',
-              ),
-            ],
+            child: Image.asset("assets/images/asset1.png"),
           ),
         ],
       ),
