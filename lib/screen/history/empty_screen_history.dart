@@ -25,26 +25,6 @@ class NoHistory extends StatelessWidget {
                   messageText:
                       'Hit the orange button down \nbelow to Create an order',
                   asset: "assets/images/history_image.svg"),
-              // Column(
-              //   children: [
-              //     SvgPicture.asset("assets/images/history_image.svg"),
-              //     Text(
-              //       'No history yet',
-              //       style: TextStyle(
-              //           fontFamily: 'Source Sans Pro',
-              //           fontSize: 28,
-              //           fontWeight: FontWeight.w600),
-              //     ),
-              //     Text(
-              //       'Hit the orange button down \nbelow to Create an order',
-              //       textAlign: TextAlign.center,
-              //       style: TextStyle(
-              //         fontFamily: 'Source Sans Pro',
-              //         fontSize: 17,
-              //       ),
-              //     ),
-              //   ],
-              // ),
               const Spacer(),
               const Ctabutton(textTitle: 'Start Ordering')
             ],

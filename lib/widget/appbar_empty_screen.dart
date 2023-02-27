@@ -14,9 +14,7 @@ class AppbarEmptyScreen extends StatelessWidget {
         Text(
           appBarTitle,
           style: TextStyle(
-              fontFamily: 'Source Sans Pro',
-              fontSize: 20,
-              fontWeight: FontWeight.bold),
+              fontFamily: 'SF Pro', fontSize: 20, fontWeight: FontWeight.bold),
         ),
         Spacer(),
       ],

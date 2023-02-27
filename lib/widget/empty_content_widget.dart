@@ -20,15 +20,13 @@ class EmptyContentWidget extends StatelessWidget {
         Text(
           tittleText,
           style: TextStyle(
-              fontFamily: 'Source Sans Pro',
-              fontSize: 28,
-              fontWeight: FontWeight.w600),
+              fontFamily: 'SF Pro', fontSize: 28, fontWeight: FontWeight.w600),
         ),
         Text(
           messageText,
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontFamily: 'Source Sans Pro',
+            fontFamily: 'SF Pro',
             fontSize: 17,
           ),
         ),
