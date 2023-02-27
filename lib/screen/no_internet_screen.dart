@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../screens/home/home_screen.dart';
 import '../widget/cta_button_widget.dart';
 
 class NoInternetScreen extends StatelessWidget {
@@ -26,7 +27,7 @@ class NoInternetScreen extends StatelessWidget {
                 child: Text(
                   'No Internet Connection',
                   style: TextStyle(
-                      fontFamily: 'Source Sans Pro',
+                      fontFamily: 'SF Pro',
                       fontSize: 28,
                       fontWeight: FontWeight.w600),
                 ),
@@ -35,11 +36,12 @@ class NoInternetScreen extends StatelessWidget {
                 'Your internet connection is currently not available please check or try again.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: 'Source Sans Pro',
+                  fontFamily: 'SF Pro',
                   fontSize: 17,
                 ),
               ),
-              Ctabutton(textTitle: 'Try Again')
+              Ctabutton(
+                  navigationDestination: HomeScreen(), textTitle: 'Try Again')
             ],
           ),
         ),

@@ -31,11 +31,11 @@ class MainScreen extends StatelessWidget {
             labelColor: Colors.black,
             labelStyle: TextStyle(
                 fontSize: 20.0,
-                fontFamily: 'Source Sans Pro',
+                fontFamily: 'SF Pro',
                 fontWeight: FontWeight.w600), //For Selected tab
             unselectedLabelStyle: TextStyle(
                 fontSize: 20.0,
-                fontFamily: 'Source Sans Pro',
+                fontFamily: 'SF Pro',
                 fontWeight: FontWeight.w600), //For Un-selected Tabs
             tabs: [
               Tab(
