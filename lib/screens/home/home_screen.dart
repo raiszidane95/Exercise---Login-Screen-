@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../menu_food/food_card_widget.dart';
 import '../../screen/detail_product/detail_product_screen.dart';
 import '../../screen/history/empty_screen_history.dart';
+import '../../screen/profile/profile_screen.dart';
 import '../../utilities/color_schema.dart';
 import '../cart/cart_screen.dart';
 
@@ -294,7 +295,18 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             BottomNavigationBarItem(
               label: "Profile",
-              icon: Icon(Icons.person),
+              icon: IconButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ProfileScreen();
+                    },
+                  ),
+                ),
+                icon: Icon(
+                  Icons.history,
+                ),
+              ),
             ),
             BottomNavigationBarItem(
               label: "History",
