@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../screens/cart/cart_screen.dart';
 
 import '../../widget/cta_button_widget.dart';
 
@@ -126,7 +127,10 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 20),
-                        child: Ctabutton(textTitle: 'Add to cart'),
+                        child: Ctabutton(
+                          textTitle: 'Add to cart',
+                          navigationDestination: Cart_Screen(),
+                        ),
                       )
                     ],
                   ),

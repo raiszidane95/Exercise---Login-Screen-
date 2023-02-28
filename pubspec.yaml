@@ -38,7 +38,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
   carousel_slider: ^4.2.1
+<<<<<<< HEAD
   shrink_sidemenu: ^2.0.0+2-null-safety
+=======
+  flutter_slidable: ^2.0.0
+>>>>>>> 5feaa13105902761b4cd11e3a17801f830e7c287
 
 dev_dependencies:
   flutter_test:
@@ -64,15 +68,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/asset1.png
-    - assets/images/asset2.png
-    - assets/images/no_internet_image.svg
-    - assets/images/search_image.svg
-    - assets/images/history_image.svg
-    - assets/images/cart_image.svg
-    - assets/images/food_2.png
-    - assets/images/food_1.png
-    - assets/images/food_0.png
+    - assets/images/
+    - assets/image/
     # - assets/images/No-Cart.png
   #   - images/a_dot_ham.jpeg
 
