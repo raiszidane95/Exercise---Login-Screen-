@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
+import '../../screens/home/home_screen.dart';
 import '../../widget/appbar_empty_screen.dart';
 import '../../widget/cta_button_widget.dart';
 import '../../widget/empty_content_widget.dart';
 
-class NoHistory extends StatelessWidget {
+class NoHistory extends StatefulWidget {
   const NoHistory({super.key});
 
+  @override
+  State<NoHistory> createState() => _NoHistoryState();
+}
+
+class _NoHistoryState extends State<NoHistory> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,7 +32,9 @@ class NoHistory extends StatelessWidget {
                       'Hit the orange button down \nbelow to Create an order',
                   asset: "assets/images/history_image.svg"),
               const Spacer(),
-              const Ctabutton(textTitle: 'Start Ordering')
+              const Ctabutton(
+                  navigationDestination: HomeScreen(),
+                  textTitle: 'Start Ordering')
             ],
           ),
         ),

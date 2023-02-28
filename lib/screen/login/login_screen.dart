@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:login_task/screens/home/home_screen.dart';
 import 'package:login_task/widget/cta_button_widget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -82,6 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 margin: EdgeInsets.only(top: 51),
                 child: Ctabutton(
                   textTitle: 'Login',
+                  navigationDestination: HomeScreen(),
                 ),
               ),
             ],

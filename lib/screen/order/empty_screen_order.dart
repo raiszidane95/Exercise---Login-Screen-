@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../screens/home/home_screen.dart';
 import '../../widget/appbar_empty_screen.dart';
 import '../../widget/cta_button_widget.dart';
 import '../../widget/empty_content_widget.dart';
@@ -26,7 +27,9 @@ class EmptyOrderScreen extends StatelessWidget {
                       'Hit the orange button down \nbelow to Create an order',
                   asset: "assets/images/cart_image.svg"),
               const Spacer(),
-              const Ctabutton(textTitle: 'Start Ordering')
+              const Ctabutton(
+                  navigationDestination: HomeScreen(),
+                  textTitle: 'Start Ordering')
             ],
           ),
         ),

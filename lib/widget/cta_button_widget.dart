@@ -5,7 +5,9 @@ class Ctabutton extends StatelessWidget {
   const Ctabutton({
     Key? key,
     required this.textTitle,
+    required this.navigationDestination,
   }) : super(key: key);
+  final Widget navigationDestination;
   final String textTitle;
 
   @override
@@ -27,7 +29,13 @@ class Ctabutton extends StatelessWidget {
                   padding: const EdgeInsets.all(4),
                   textStyle: const TextStyle(fontSize: 16),
                 ),
-                onPressed: () {},
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return navigationDestination;
+                    },
+                  ),
+                ),
                 child: Text(
                   textTitle,
                   style: TextStyle(
