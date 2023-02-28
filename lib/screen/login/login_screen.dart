@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:login_task/screens/home/home_screen.dart';
 import 'package:login_task/widget/cta_button_widget.dart';
 
+import '../drawer/shrink_drawer_screen.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -83,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 margin: EdgeInsets.only(top: 51),
                 child: Ctabutton(
                   textTitle: 'Login',
-                  navigationDestination: HomeScreen(),
+                  navigationDestination: MyHomePage(title: 'Food Delivery App'),
                 ),
               ),
             ],

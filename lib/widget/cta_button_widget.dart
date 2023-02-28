@@ -29,13 +29,15 @@ class Ctabutton extends StatelessWidget {
                   padding: const EdgeInsets.all(4),
                   textStyle: const TextStyle(fontSize: 16),
                 ),
-                onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return navigationDestination;
-                    },
-                  ),
-                ),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return navigationDestination;
+                      },
+                    ),
+                  );
+                },
                 child: Text(
                   textTitle,
                   style: TextStyle(

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
-import '../../menu_food/food_card_widget.dart';
+import '../../menu_food/menu_food_screen.dart';
 import '../../screen/detail_product/detail_product_screen.dart';
 import '../../screen/history/empty_screen_history.dart';
 import '../../screen/profile/profile_screen.dart';
 import '../../utilities/color_schema.dart';
-import '../cart/cart_screen.dart';
+import '../../widget/food_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,32 +32,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: background,
-        appBar: AppBar(
-          elevation: 0.0,
-          backgroundColor: background,
-          centerTitle: true,
-          leading: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.menu,
-              color: Colors.black,
-            ),
-          ),
-          actions: [
-            IconButton(
-                onPressed: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return Cart_Screen();
-                        },
-                      ),
-                    ),
-                icon: Icon(
-                  Icons.shopping_cart_outlined,
-                  color: Colors.grey[400],
-                ))
-          ],
-        ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
@@ -75,19 +50,34 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 20.0,
               ),
               //To add some elevation & border radius to text field need to wrap in Material
-              Material(
-                elevation: 0.0,
-                borderRadius: BorderRadius.circular(30.0),
-                child: TextField(
-                  textAlign: TextAlign.start,
-                  textAlignVertical: TextAlignVertical.center,
-                  decoration: InputDecoration(
-                      hintText: "Search",
-                      prefixIcon: Icon(
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return MenuFoodScreen();
+                      },
+                    ),
+                  );
+                },
+                child: Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.grey[100],
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
                         Icons.search_sharp,
                         color: Colors.black,
                       ),
-                      border: InputBorder.none),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text('Search')
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
@@ -144,31 +134,27 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Vegie tomato mix"),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
                               SizedBox(
                                 width: 20,
                               ),
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Vegie tomato mix"),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Vegie tomato mix"),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Vegie tomato mix"),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
+                              Gap(20),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
+                              Gap(20),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
                             ],
                           ),
                         ),
@@ -176,24 +162,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Bubur ayam"),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Bubur ayam"),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Bubur ayam"),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
+                              Gap(20),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
+                              Gap(20),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
                             ],
                           ),
                         ),
@@ -201,24 +183,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Nasi padang"),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Nasi padang"),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Nasi padang"),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
+                              Gap(20),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
+                              Gap(20),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
                             ],
                           ),
                         ),
@@ -226,24 +204,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Es campur"),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Es campur"),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              FoodCard(
-                                  navigatorDestination: DetailProductScreen(),
-                                  imageFood: "assets/image/food1.png",
-                                  title: "Es campur"),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
+                              Gap(20),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
+                              Gap(20),
+                              FoodCardWidget(
+                                  navigationDestination: DetailProductScreen(),
+                                  image: "assets/image/food1.png",
+                                  text: "Vegie tomato mix"),
                             ],
                           ),
                         ),
@@ -304,7 +278,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 icon: Icon(
-                  Icons.history,
+                  Icons.person,
                 ),
               ),
             ),
