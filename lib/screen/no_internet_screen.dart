@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../widget/cta_button_widget.dart';
 import 'drawer/shrink_drawer_screen.dart';
 

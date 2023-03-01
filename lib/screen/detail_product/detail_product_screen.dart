@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../screens/cart/cart_screen.dart';
 
 import '../../widget/cta_button_widget.dart';
+import '../cart/cart_screen.dart';
 
 class DetailProductScreen extends StatefulWidget {
   const DetailProductScreen({super.key});
@@ -20,8 +21,6 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
       _selectedIndex = index;
     });
   }
-
-  void pressedFavorite() {}
 
   @override
   Widget build(BuildContext context) {

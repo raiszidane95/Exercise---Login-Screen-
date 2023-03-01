@@ -25,11 +25,6 @@ class NoInternetScreen extends StatelessWidget {
                       'Your internet connection is currently not available please check or try again.',
                   asset: "assets/images/no_internet_image.svg"),
               const Spacer(),
-              Ctabutton(
-                  navigationDestination: MyHomePage(
-                    title: 'Food Delivery App',
-                  ),
-                  textTitle: 'Try Again')
             ],
           ),
         ),
