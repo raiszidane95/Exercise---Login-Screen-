@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../widget/cta_button_widget.dart';
-import 'home/home_screen.dart';
+import 'drawer/shrink_drawer_screen.dart';
 
 class NoInternetScreen extends StatelessWidget {
   const NoInternetScreen({super.key});
@@ -40,7 +40,8 @@ class NoInternetScreen extends StatelessWidget {
                 ),
               ),
               Ctabutton(
-                  navigationDestination: HomeScreen(), textTitle: 'Try Again')
+                  navigationDestination: MyHomePage(title: 'Food Delivery App'),
+                  textTitle: 'Try Again')
             ],
           ),
         ),

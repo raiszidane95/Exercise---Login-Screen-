@@ -13,10 +13,11 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  gap:
   flutter_svg: ^1.1.6
   carousel_slider: ^4.2.1
-  shrink_sidemenu: ^2.0.0+2-null-safety
   flutter_slidable: ^2.0.0
+  shrink_sidemenu: ^2.0.0+2-null-safety
 
 dev_dependencies:
   flutter_test:
@@ -29,8 +30,23 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
-    - assets/image/
+    - assets/images/asset1.png
+    - assets/images/asset2.png
+    - assets/images/no_internet_image.svg
+    - assets/images/search_image.svg
+    - assets/images/history_image.svg
+    - assets/images/cart_image.svg
+    - assets/images/food_2.png
+    - assets/images/food_1.png
+    - assets/images/food_0.png
+    # - assets/images/No-Cart.png
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
 
   fonts:
     - family: Source Sans Pro

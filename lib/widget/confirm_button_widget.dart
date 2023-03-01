@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../screen/home/home_screen.dart';
+import '../screen/drawer/shrink_drawer_screen.dart';
+import '../screens/home/home_screen.dart';
 
 class ActionButtonConfirmWidget extends StatelessWidget {
   const ActionButtonConfirmWidget({Key? key, required this.buttonAction})
@@ -119,7 +120,7 @@ class ActionButtonConfirmWidget extends StatelessWidget {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) {
-                              return HomeScreen();
+                              return MyHomePage(title: 'Food Delivery App');
                             },
                           ),
                         );

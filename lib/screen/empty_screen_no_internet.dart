@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../widget/cta_button_widget.dart';
 import '../widget/empty_content_widget.dart';
-import 'home/home_screen.dart';
+import 'drawer/shrink_drawer_screen.dart';
 
 class NoInternetScreen extends StatelessWidget {
   const NoInternetScreen({super.key});
@@ -25,8 +25,6 @@ class NoInternetScreen extends StatelessWidget {
                       'Your internet connection is currently not available please check or try again.',
                   asset: "assets/images/no_internet_image.svg"),
               const Spacer(),
-              Ctabutton(
-                  navigationDestination: HomeScreen(), textTitle: 'Try Again')
             ],
           ),
         ),

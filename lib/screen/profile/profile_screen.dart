@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../widget/button_widget.dart';
 import '../../widget/fonts_widget.dart';
+import '../order/empty_screen_order.dart';
+import 'profile_change_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -24,7 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xFFF5F5F8),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(5),
         child: ListView(
           children: [
             Column(
@@ -47,7 +49,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   height: 20,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Column(
                     children: [
                       Row(
@@ -58,10 +60,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 fontSize: 18, fontWeight: FontWeight.w400),
                           ),
                           const SizedBox(
-                            width: 100,
+                            width: 50,
                           ),
                           TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return ProfileChangeScreen();
+                                    },
+                                  ),
+                                );
+                              },
                               child: const Text(
                                 "change",
                                 style: TextStyle(
@@ -81,8 +91,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             children: [
                               Container(
                                 alignment: Alignment.topLeft,
-                                child: Image.asset('assets/img/img_profile.png',
-                                    height: 90, width: 80),
+                                child: Image.asset(
+                                    'assets/image/img_profile.png',
+                                    height: 90,
+                                    width: 80),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 10),
@@ -155,30 +167,41 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                       spacingBoxSized(),
-                      Container(
-                        height: 50,
-                        width: 300,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Row(
-                            children: [
-                              const Padding(
-                                padding: EdgeInsets.only(left: 20),
-                                child: SizedBox(
-                                    width: 100,
-                                    child: FontWidget(
-                                        text: "Orders", sizeFont: 16)),
-                              ),
-                              const SizedBox(
-                                width: 100,
-                              ),
-                              IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(Icons.arrow_forward_ios))
-                            ],
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return EmptyOrderScreen();
+                              },
+                            ),
+                          );
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 300,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Row(
+                              children: [
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 20),
+                                  child: SizedBox(
+                                      width: 100,
+                                      child: FontWidget(
+                                          text: "Orders", sizeFont: 16)),
+                                ),
+                                const SizedBox(
+                                  width: 100,
+                                ),
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(Icons.arrow_forward_ios))
+                              ],
+                            ),
                           ),
                         ),
                       ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../screens/home/home_screen.dart';
 import '../../widget/appbar_empty_screen.dart';
 import '../../widget/cta_button_widget.dart';
 import '../../widget/empty_content_widget.dart';
-import '../home/home_screen.dart';
+import '../drawer/shrink_drawer_screen.dart';
 
 class EmptyOrderScreen extends StatelessWidget {
   const EmptyOrderScreen({super.key});
@@ -28,7 +29,7 @@ class EmptyOrderScreen extends StatelessWidget {
                   asset: "assets/images/cart_image.svg"),
               const Spacer(),
               const Ctabutton(
-                  navigationDestination: HomeScreen(),
+                  navigationDestination: MyHomePage(title: 'Food Delivery App'),
                   textTitle: 'Start Ordering')
             ],
           ),
