@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screens/home/home_screen.dart';
+import '../screen/home/home_screen.dart';
 
 class ActionButtonConfirmWidget extends StatelessWidget {
   const ActionButtonConfirmWidget({Key? key, required this.buttonAction})

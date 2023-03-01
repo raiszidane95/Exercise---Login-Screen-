@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../screens/home/home_screen.dart';
 import '../widget/cta_button_widget.dart';
+import 'home/home_screen.dart';
 
 class NoInternetScreen extends StatelessWidget {
   const NoInternetScreen({super.key});

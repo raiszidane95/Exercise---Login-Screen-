@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:login_task/screens/home/home_screen.dart';
 import 'package:login_task/widget/cta_button_widget.dart';
+
+import '../home/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

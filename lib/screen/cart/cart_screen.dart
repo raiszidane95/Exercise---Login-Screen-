@@ -10,7 +10,7 @@ class Cart_Screen extends StatelessWidget {
     MyModel(name: 'product2', image: 'assets/image/food1.png', price: 415.30),
     MyModel(name: 'product3', image: 'assets/image/food1.png', price: 115.50),
     MyModel(name: 'product4', image: 'assets/image/food1.png', price: 115.50),
-    MyModel(name: 'product5', image: 'assets/image/food1.png', price: 115.50),
+    MyModel(name: 'product5 ', image: 'assets/image/food1.png', price: 115.50),
     MyModel(name: 'product6', image: 'assets/image/food1.png', price: 115.50),
     MyModel(name: 'product7', image: 'assets/image/food1.png', price: 115.50),
     MyModel(name: 'product8', image: 'assets/image/food1.png', price: 115.50),
